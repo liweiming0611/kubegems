@@ -83,7 +83,7 @@ kubectl apply -f https://github.com/kubegems/kubegems/raw/main/deploy/installer.
 等待安装程序准备就绪。
 
 ```sh
-kubectl --namespace bundle-controller get pods
+kubectl --namespace kubegems-installer get pods
 ```
 
 可选项:
@@ -98,7 +98,7 @@ kubectl --namespace bundle-controller get pods
 1. 如果没有CSI插件，可以安装 local-path-provisioner:
 
   ```sh
-  kubectl create namespace local-path-provisioner
+  kubectl create namespace local-path-storage
   kubectl apply -f https://raw.githubusercontent.com/kubegems/kubegems/main/deploy/addon-local-path-provisioner.yaml
   ```
 
